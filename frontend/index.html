@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Threat Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Email Threat Detector</h1>
+        <p class="subtitle">
+            Analyze an email for phishing and security threats
+        </p>
+
+        <div class="card">
+
+            <input type="email" id="sender"
+       list="senderSuggestions"
+       placeholder="sender@example.com">
+
+        <datalist id="senderSuggestions"></datalist>
+
+        <label>Recipient</label>
+        <input type="email" id="recipient"
+            list="recipientSuggestions"
+            placeholder="recipient@example.com">
+
+        <datalist id="recipientSuggestions"></datalist>
+            <label>Subject</label>
+            <input type="text" id="subject"
+                   placeholder="Email subject">
+
+            <label>Email Body</label>
+            <textarea id="emailBody"
+                      placeholder="Paste the email content here..."></textarea>
+
+            <button onclick="analyzeEmail()">
+                Analyze Email
+            </button>
+
+        </div>
+
+        <div id="result" class="card result hidden">
+
+            <h2>Analysis Result</h2>
+
+            <div class="risk">
+                <span>Risk Score</span>
+                <strong id="riskScore">-</strong>
+            </div>
+
+            <div class="threat">
+                <span>Threat Level</span>
+                <strong id="threatType">-</strong>
+            </div>
+
+            <hr>
+
+            <h3>Machine Learning</h3>
+
+            <p>
+                Prediction:
+                <strong id="mlPrediction">-</strong>
+            </p>
+
+            <p>
+                Probability:
+                <strong id="mlProbability">-</strong>
+            </p>
+
+            <p>
+                ML Score:
+                <strong id="mlScore">-</strong>
+            </p>
+
+            <h3>Forensic Analysis</h3>
+
+           <h3>Forensic Analysis</h3>
+
+<p>
+    Forensic Score:
+    <strong id="forensicScore">-</strong>
+</p>
+
+<p>
+    SPF:
+    <strong id="spf">-</strong>
+</p>
+
+<p>
+    DKIM:
+    <strong id="dkim">-</strong>
+</p>
+
+<p>
+    DMARC:
+    <strong id="dmarc">-</strong>
+</p>
+
+<p>
+    Reply-To:
+    <strong id="replyTo">-</strong>
+</p>
+
+<h3>Evidence</h3>
+
+            <h3>Evidence</h3>
+
+            <ul id="evidenceList"></ul>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+From: Security Team <security@example.com>
+To: student@gmail.com
+Subject: Urgent Account Verification
+Date: Sun, 30 Aug 2026 12:00:00 +0530
+Message-ID: <test123@example.com>
+Reply-To: support@fake-example.com
+Received: from mail.fake-example.com (mail.fake-example.com [203.0.113.25])
+    by mail.example.net with ESMTP id ABC123
+    for <student@gmail.com>;
+    Sun, 30 Aug 2026 12:00:00 +0530
+Authentication-Results: mail.example.net;
+    spf=fail smtp.mailfrom=fake-example.com;
+    dkim=fail;
+    dmarc=fail
+
+Content-Type: text/plain; charset="UTF-8"
+
+URGENT!
+
+Your account has been suspended.
+
+Please verify your password immediately by clicking here:
+http://fake-example.com/verify
+
+Thank you,
+Security Team
